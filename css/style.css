@@ -36,6 +36,7 @@ body {
   margin: 0 auto;
   font-family: 'TT Lakes Regular', sans-serif;
   letter-spacing: 1px;
+  background-color: #F8F8F8;
 }
 
 /* Header Start */
@@ -44,20 +45,24 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 2px solid white;
+  border-bottom: 1px solid #41F6D7;
   padding: 5px;
   background-color: white;
 }
 
-@media (min-width: 1120px) {
-  .header {
-    display: none;
-  }
+.left-side-block, .right-side-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .design-button {
@@ -70,28 +75,8 @@ body {
   margin: 0 10px;
 }
 
-.burger-icon {
-  background: url("../images/svg/icon_menu_burger.svg") no-repeat center;
-}
-
-.call-icon {
-  background: url("../images/svg/icon_call.svg") no-repeat center;
-}
-
-.chat-icon {
-  background: url("../images/svg/icon_chat.svg") no-repeat center;
-}
-
-.profile-icon {
-  background: url("../images/svg/icon_profile.svg") no-repeat center;
-}
-
-.repair-icon {
-  background: url("../images/svg/icon_repair.svg") no-repeat center;
-}
-
-.checkstatus-icon {
-  background: url("../images/svg/icon_checkstatus.svg") no-repeat center;
+button {
+  background-color: transparent;
 }
 
 .design-button:hover {
@@ -110,13 +95,7 @@ body {
 
 .status-block {
   border-left: 2px solid #F8F8F8;
-  margin-left: 30px;
-}
-
-@media (min-width: 768px) {
-  .status-block {
-    margin: 0;
-  }
+  margin-left: 15px;
 }
 
 .contact-us {
@@ -131,22 +110,26 @@ body {
   }
 }
 
+@media (min-width: 1120px) {
+  .contact-us {
+    display: none;
+  }
+}
+
 .logo__img {
-  background-color: white;
-  margin: 10px 0;
+  margin: 10px;
 }
 
 @media (min-width: 768px) {
   .burger {
     border-right: 2px solid #F8F8F8;
-    margin-right: 15px;
+    margin-right: 10px;
+    padding-right: 15px;
   }
 }
 
 .service__header {
-  background-color: #F8F8F8;
-  padding: 20px 0;
-  font-family: 'TTLakes-Bold';
+  display: none;
 }
 
 @media (min-width: 1120px) {
@@ -157,9 +140,45 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    min-width: 1120px;
+    background-color: #F8F8F8;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .burger, .logo, .status-block {
+    display: none;
+  }
+  .header {
+    background-color: #F8F8F8;
+    border-bottom: none;
+  }
+  .service-buttons__buttons-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: 'TT Lakes',' Arial', 'Helvetica', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    margin: 15px 45px 15px 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .service-buttons__buttons-text:last-child {
+    margin-right: 0;
+  }
+  .service__text {
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    font-family: 'TT Lakes',' Arial', 'Helvetica', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    padding-left: 15px;
+    border-left: 3px solid #41F6D7;
   }
 }
 
@@ -169,46 +188,24 @@ body {
 
 @media (min-width: 1120px) {
   .service-buttons {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding: 4px;
-    margin-right: 15px;
   }
-}
-
-.service__text {
-  font-family: 'TT Lakes',' Arial', 'Helvetica', sans-serif;
-  font-size: 28px;
-  font-weight: bold;
-  padding-left: 15px;
-  border-left: 3px solid #41F6D7;
 }
 
 @media (min-width: 1120px) {
-  .service-buttons__repair-img {
+  .service-buttons__repair-img,
+  .service-buttons__checkstatus-img {
     border: none;
     cursor: pointer;
     padding: 0 5px;
     margin-right: 15px;
-    background: url("../images/svg/icon_repair.svg") no-repeat right;
-  }
-  .service-buttons__checkstatus-img {
-    padding: 0 5px;
-    border: none;
-    cursor: pointer;
-    background: url("../images/svg/icon_checkstatus.svg") no-repeat right;
-  }
-  .service-buttons__buttons-text {
-    display: block;
-    font-family: 'TT Lakes',' Arial', 'Helvetica', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: -0.2px;
-    color: #1B1C21;
-    margin: 15px 45px 15px 0;
   }
 }
 
-.menu-navigation {
+.menu-navigation, .intro {
   background-color: #F8F8F8;
 }
 
@@ -216,7 +213,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 10px;
+  padding: 10px 10px;
   overflow-x: scroll;
 }
 
@@ -236,7 +233,8 @@ body {
   }
 }
 
-.navigation-slider__item {
+.navigation-slider__item,
+.navigation-slider__item_active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,13 +242,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+  min-height: 40px;
   min-width: 250px;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
-  padding: 5px;
   font-family: 'TTLakes-Regular';
-  font-weight: lighter;
   border-radius: 6px;
+  vertical-align: baseline;
 }
 
 .navigation-slider__item:hover {
@@ -270,10 +266,9 @@ body {
   letter-spacing: -0.2px;
   text-decoration: none;
   color: #7E7E82;
-}
-
-.intro {
-  background-color: #F8F8F8;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .intro__intro-block {
@@ -298,7 +293,15 @@ body {
 
 @media (min-width: 768px) {
   .intro__intro-text {
-    overflow-y: visible;
+    width: 312px;
+    overflow-y: hidden;
+  }
+}
+
+@media (min-width: 1120px) {
+  .intro__intro-text {
+    width: 490px;
+    overflow-y: hidden;
   }
 }
 
@@ -311,9 +314,14 @@ body {
   text-align: right;
   border: none;
   background-color: #F8F8F8;
+  outline: none;
   padding: 7px;
   font-size: 15px;
   margin-left: 20px;
+}
+
+.intro__readmore-button:hover {
+  color: #7E7E82;
 }
 
 .intro__image {
@@ -322,7 +330,6 @@ body {
 
 .intro__image_foto {
   width: 100%;
-  height: 100%;
   border-radius: 10px;
 }
 
@@ -347,5 +354,9 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+}
+
+#more {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

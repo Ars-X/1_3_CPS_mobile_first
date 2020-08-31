@@ -14,51 +14,65 @@
 <body>
   <!-- Header Star -->
   <header class="header">
-    <div class="burger">
-      <button class="header__design-button design-button burger-icon"></button>
+    <div class="left-side-block">
+      <div class="burger">
+        <button class="header__design-button design-button burger-icon">
+          <img src="./images/svg/icon_menu_burger.svg" alt="Меню">
+        </button>
+      </div>
+      <div class="logo">
+        <a href="#" class="logo-link">
+          <img src="./images/svg/cps_logo.svg" alt="CPS logo" class="logo__img">
+        </a>
+      </div>
     </div>
-    <div class="logo">
-      <a href="#" class="logo-link">
-        <img src="./images/svg/cps_logo.svg" alt="CPS logo" class="logo__img">
-      </a>
+    <div class="right-side-block">
+      <div class="contact-us buttons-block">
+        <button class="header__design-button design-button chat-icon">
+          <img src="./images/svg/icon_call.svg" alt="Позвонить">
+        </button>
+        <button class="header__design-button design-button call-icon">
+          <img src="./images/svg/icon_chat.svg" alt="Написать">
+        </button>
+        <button class="header__design-button design-button profile-icon">
+          <img src="./images/svg/icon_profile.svg" alt="Профиль">
+        </button>
+      </div>
+      <div class="status-block buttons-block">
+        <button class="header__design-button design-button repair-icon">
+          <img src="./images/svg/icon_repair.svg" alt="Оставить заявку">
+        </button>
+        <button class="header__design-button design-button checkstatus-icon">
+          <img src="./images/svg/icon_checkstatus.svg" alt="Узнать статус ремонта">
+        </button>
+      </div>
     </div>
-    <div class="contact-us buttons-block">
-      <button class="header__design-button design-button chat-icon"></button>
-      <button class="header__design-button design-button call-icon"> </button>
-      <button class="header__design-button design-button profile-icon"></button>
-    </div>
-    <div class="status-block buttons-block">
-      <button class="header__design-button design-button repair-icon"></button>
-      <button class="header__design-button design-button checkstatus-icon"></button>
-    </div>
-  </header>
-  <!-- 1120px Block Start -->
-  <section class="service-header">
+    <!-- 1120px Block Start -->
     <div class="service__header">
       <h1 class="service__text">
         Услуги и сервисы
       </h1>
       <div class="service-buttons">
-        <button class="service-buttons__repair-img">
-          <span class="service-buttons__buttons-text">
-            Оставить заявку
-          </span>
-        </button>
-        <button class="service-buttons__checkstatus-img">
-          <span class="service-buttons__buttons-text">
-            Статус ремонта
-          </span>
-        </button>
+        <label class="service-buttons__buttons-text"> Оставить заявку
+          <button class="service-buttons__repair-img design-button">
+            <img src="./images/svg/icon_repair.svg" alt="Оставить заявку">
+          </button>
+        </label>
+        <label class="service-buttons__buttons-text"> Статус ремонта
+          <button class="service-buttons__checkstatus-img design-button">
+            <img src="./images/svg/icon_checkstatus.svg" alt="Статус ремонта">
+          </button>
+        </label>
       </div>
     </div>
-  </section>
-  <!-- 1120px Block End -->
+    <!-- 1120px Block End -->
+  </header>
   <!-- Header End -->
 
   <!-- Menu Slider Start -->
   <nav class="menu-navigation">
     <div class="navigation-slider">
-      <div class="navigation-slider__item navigation-slider__item_active">
+      <div class="navigation-slider__item_active">
         <a href="#" class="navigation-slider__text">Ремонтируемые бренды</a>
       </div>
       <div class="navigation-slider__item">
@@ -84,7 +98,7 @@
   <section class="intro">
     <div class="intro__intro-wrapper">
       <div class="intro__intro-block">
-        <div class="intro__intro-text">
+        <div class="intro__intro-text show-full-text">
           <p>
             Мы являемся авторизованным сервисным центром по ремонту техники Dell.
             Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
@@ -92,11 +106,24 @@
           <p>
             Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
             количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь,
-            советуют нас родным и близким.
+            советуют нас родным и близким.<span id="dots">...</span>
+          </p>
+
+          <div id="more">
+            <p>
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+              количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь,
+              советуют нас родным и близким.
+            </p>
+            <p>
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+              количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь,
+              советуют нас родным и близким.
+          </div>
           </p>
         </div>
         <div class="intro__readmore-wrap">
-          <button class="intro__readmore-button">
+          <button onclick="showMore()" id="btn" class="intro__readmore-button">
             <span>Читать далее</span>
           </button>
         </div>
@@ -107,6 +134,7 @@
     </div>
   </section>
   <!-- Intro End -->
+  <script src="scripts/script.js"></script>
 </body>
 
 </html>
