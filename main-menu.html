@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/main_menu_style.css">
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
   <meta name="keywords" content="CPS, ремонт, сервис">
   <meta name="description" content="Сервис по ремонту техники.">
   <title>Сервисный центр CPS</title>
@@ -23,9 +24,17 @@
             <img class="logo__img" src="images/svg/cps_logo.svg" alt="Логотип CPS">
           </a>
         </div>
-        <div class="search design-button">
-          <img src="images/svg/icon_search.svg"></div>
+        <div class="search-wrapper">
+          <form class="search-bar">
+            <input type="text" placeholder="Найти..." class="search-bar__input">
+            <button type="submit" class="main-menu__btn design-button"><img src="images/svg/icon_search.svg"></button>
+          </form>
+        </div>
+        <!-- <div class="search design-button">
+          <img src="images/svg/icon_search.svg">
+        </div> -->
       </div>
+
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -54,6 +63,7 @@
           </li>
         </ul>
       </nav>
+
       <div class="feedback">
         <ul class="feedback__list list">
           <li class="feedback__item">
