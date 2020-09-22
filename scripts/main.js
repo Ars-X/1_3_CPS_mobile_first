@@ -11,7 +11,7 @@ sectionExpandBtn.addEventListener('click', function () {
     sectionExpandBtn.textContent = 'Свернуть';
   }
   sectionExpandBtn.classList.toggle('btn-read-more--active');
-  sectionWrapper.classList.toggle('section__list--expanded');
+  sectionWrapper.classList.toggle('brands-section__list--expanded');
 });
 
 //Swiper Init
